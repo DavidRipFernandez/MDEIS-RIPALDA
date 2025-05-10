@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace KataIndividual.Kata1
 {
-    public class Dog : IAnimal
+    public class BirdAnterior : IAnimal
     {
         public void fly()
         {
-            throw new NotImplementedException("Dog can't fly");
+            Console.WriteLine("Bird is flying");
         }
 
         public void Run()
         {
-            Console.WriteLine("Dog is running");
+            Console.WriteLine("Bird is running");
         }
 
         public void Swim()
         {
-            Console.WriteLine("Dog is swimming");
+            throw new NotImplementedException("Bird can´t swim");
         }
     }
 }

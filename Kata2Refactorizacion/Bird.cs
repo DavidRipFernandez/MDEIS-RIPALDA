@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace KataIndividual.Kata2Refactorizacion
 {
-    internal class Bird
+    public class Bird : IFlyable, IRunnable
     {
+        public void fly()
+        {
+            Console.WriteLine("Bird is flying");
+        }
+
+        public void Run()
+        {
+            Console.WriteLine("Bird is running");
+        }
     }
 }

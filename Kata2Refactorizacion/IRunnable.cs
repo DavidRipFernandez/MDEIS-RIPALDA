@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace KataIndividual.Kata2Refactorizacion
 {
-    internal interface IRunnable
+    public interface IRunnable
     {
+        void Run();
     }
 }

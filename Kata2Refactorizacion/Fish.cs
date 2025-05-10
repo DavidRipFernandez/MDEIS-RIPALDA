@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace KataIndividual.Kata2Refactorizacion
 {
-    public interface ISwimmable
+    public class Fish : ISwimmable
     {
-        void Swim();
+        public void Swim()
+        {
+            Console.WriteLine("Fish is swimming");
+        }
     }
 }
