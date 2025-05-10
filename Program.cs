@@ -3,6 +3,8 @@ using KataIndividual.Kata1;
 using KataIndividual.Kata1Refactorizacion;
 using KataIndividual.Kata2;
 using KataIndividual.Kata2Refactorizacion;
+using KataIndividual.Kata3;
+using KataIndividual.Kata3Refactorizacion;
 using System;
 
 namespace KataIndividual
@@ -45,9 +47,8 @@ namespace KataIndividual
             dog.Run();
             dog.Swim();
 
-          
 
-            Console.WriteLine("\n=== Kata 2 Operaciones no soportadas ===");
+            Console.WriteLine("\n=== Kata 2 Sistema Legacy con Métodos no Utilizados ===");
             ILegacyPrinterAnterior legacy = new BasicPrinterAnterior();
             legacy.Print("Documento1.pdf");
             TryAction(() => legacy.Scan("Documento1.pdf"));
@@ -59,6 +60,37 @@ namespace KataIndividual
 
             BasicPrinter.Print("CartaTrabajo.doc");
             Scanner.Scan("Escanner1.jpg");
+
+
+            Console.WriteLine("\n=== Kata 3 Operaciones no soportadas ===");
+
+            IVehicleAnterior[] vehicles = {
+                new CarLegacyAnterior(),
+                new PlaneLegacyAnterior(),
+                new BoatLegacyAnterior()
+            };
+
+            foreach (var v in vehicles)
+            {
+                Console.WriteLine($"\n– {v.GetType().Name} –");
+                try { v.Drive(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.Sail(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.Fly(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+            }
+
+            Console.WriteLine("\n=== Kata 3 Gestión de Sensores en un sistema de Monitoreo ===");
+            Console.WriteLine("\n– Car –");
+            var car = new Car();
+            car.Drive();
+
+            Console.WriteLine("\n– Plane –");
+            var plane = new Plane();
+            plane.fly();
+
+            Console.WriteLine("\n– Boat –");
+            var boat = new Boat();
+            boat.Sail();
+
 
 
             // SALIR
