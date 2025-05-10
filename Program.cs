@@ -5,6 +5,8 @@ using KataIndividual.Kata2;
 using KataIndividual.Kata2Refactorizacion;
 using KataIndividual.Kata3;
 using KataIndividual.Kata3Refactorizacion;
+using KataIndividual.Kata4;
+using KataIndividual.Kata4Refactorizacion;
 using System;
 
 namespace KataIndividual
@@ -78,7 +80,7 @@ namespace KataIndividual
                 try { v.Fly(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
             }
 
-            Console.WriteLine("\n=== Kata 3 Gestión de Sensores en un sistema de Monitoreo ===");
+            Console.WriteLine("\n=== Kata 3 - Solucion ===");
             Console.WriteLine("\n– Car –");
             var car = new Car();
             car.Drive();
@@ -90,6 +92,32 @@ namespace KataIndividual
             Console.WriteLine("\n– Boat –");
             var boat = new Boat();
             boat.Sail();
+
+
+            Console.WriteLine("\n=== Kata 4 Gestión de Sensores en un sistema de monitoreo ===");
+            ISensorLegacy[] MonitoreoSensors = {
+                new TemperatureSensorLegacy(),
+                new PreassureSensorLegacy(),
+                new HumiditySensorLegacy()
+            };
+            foreach (var v in MonitoreoSensors)
+            {
+                Console.WriteLine($"\n– {v.GetType().Name} –");
+                try { v.ReadTemperature(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.ReadPreassure(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.ReadHumidity(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+            }
+
+            Console.WriteLine("\n=== Kata 4 - Resolución");
+
+
+            Console.WriteLine("\n– HumiditySensor –");
+            var humidity = new HumiditySensor();
+            Console.WriteLine($"Humidity: {humidity.ReadHumidity()}");
+
+            Console.WriteLine("\n– PressureSensor –");
+            var pres = new PreassureSensor();
+            Console.WriteLine($"Pressure: {pres.ReadPreassure()}");
 
 
 
