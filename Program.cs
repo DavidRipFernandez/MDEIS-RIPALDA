@@ -9,6 +9,8 @@ using KataIndividual.Kata4;
 using KataIndividual.Kata4Refactorizacion;
 using KataIndividual.Kata5;
 using KataIndividual.Kata5Refactorizacion;
+using KataIndividual.Kata6;
+using KataIndividual.Kata6Refactorizacion;
 using System;
 
 namespace KataIndividual
@@ -112,7 +114,6 @@ namespace KataIndividual
 
             Console.WriteLine("\n=== Kata 4 - Solución con Refactorización");
 
-
             Console.WriteLine("\n– HumiditySensor –");
             var humidity = new HumiditySensor();
             Console.WriteLine($"Humidity: {humidity.ReadHumidity()}");
@@ -152,10 +153,33 @@ namespace KataIndividual
 
 
             Console.WriteLine("\n=== Kata 6 - Sistema de Pago en E-Commerce (SIN SOLID)");
+           
+            IPaymentProcessorLegacy[] ProcessPayment = {
+                new CreditCardProcessorLegacy(),
+                new PayPalProcessorLegacy(),
+                new CryptoProcessorLegacy()
+            };
+            foreach (var v in ProcessPayment)
+            {
+                Console.WriteLine($"\n– {v.GetType().Name} –");
+                try { v.ProcessPayPal(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.ProcessPayPal(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.ProcessCrypto(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+            };
 
 
-            Console.WriteLine("\n=== Kata 6 - Solucióin con Refactorización");
+            Console.WriteLine("\n=== Kata 6 - Solución con Refactorización");
+            Console.WriteLine("\n– CreditCardProcessor –");
+            var cc = new CreditCardProcessor();
+            cc.ProcessCreditCard();
 
+            Console.WriteLine("\n– PayPalProcessor –");
+            var pp = new PayPalProcessor();
+            pp.ProcessPayPal();
+
+            Console.WriteLine("\n– CryptoProcessor –");
+            var cp = new CryptoProcessor();
+            cp.ProcessCrypto();
 
             // SALIR
             Console.WriteLine("\nPresiona una tecla para salir...");
