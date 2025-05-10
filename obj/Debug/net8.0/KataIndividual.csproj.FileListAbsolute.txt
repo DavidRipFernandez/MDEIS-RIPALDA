@@ -1,0 +1,14 @@
+C:\Users\ROG\source\repos\KataIndividual\bin\Debug\net8.0\KataIndividual.exe
+C:\Users\ROG\source\repos\KataIndividual\bin\Debug\net8.0\KataIndividual.deps.json
+C:\Users\ROG\source\repos\KataIndividual\bin\Debug\net8.0\KataIndividual.runtimeconfig.json
+C:\Users\ROG\source\repos\KataIndividual\bin\Debug\net8.0\KataIndividual.dll
+C:\Users\ROG\source\repos\KataIndividual\bin\Debug\net8.0\KataIndividual.pdb
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\KataIndividual.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\KataIndividual.AssemblyInfoInputs.cache
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\KataIndividual.AssemblyInfo.cs
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\KataIndividual.csproj.CoreCompileInputs.cache
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\KataIndividual.dll
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\refint\KataIndividual.dll
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\KataIndividual.pdb
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\KataIndividual.genruntimeconfig.cache
+C:\Users\ROG\source\repos\KataIndividual\obj\Debug\net8.0\ref\KataIndividual.dll
