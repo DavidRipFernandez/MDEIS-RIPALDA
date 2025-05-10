@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KataIndividual.Kata2Refactorizacion
+namespace KataIndividual.Kata1Refactorizacion
 {
-    public interface ISwimmable
+    public interface IRunnable
     {
-        void Swim();
+        void Run();
     }
 }

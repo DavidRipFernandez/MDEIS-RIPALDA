@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace KataIndividual.Kata2Refactorizacion
 {
-    public interface IRunnable
+    public class BasicPrinter : IPrintable
     {
-        void Run();
+        public void Print(string document) => Console.WriteLine($"[Refactor] Imprimiendo: {document}");
     }
 }

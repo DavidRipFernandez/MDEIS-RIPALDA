@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KataIndividual.Kata2Refactorizacion
+namespace KataIndividual.Kata1Refactorizacion
 {
     public class Bird : IFlyable, IRunnable
     {

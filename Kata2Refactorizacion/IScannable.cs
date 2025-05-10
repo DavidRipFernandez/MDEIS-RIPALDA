@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace KataIndividual.Kata2Refactorizacion
 {
-    public interface IFlyable
+    public interface IScannable
     {
-        void fly();
+        void Scan(string document);
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KataIndividual")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e21eef3490614b5b58ab6e26e2342446b2ba89ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79aea72de45229b25000f2fefad15fe0e8e7c99a")]
 [assembly: System.Reflection.AssemblyProductAttribute("KataIndividual")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KataIndividual")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

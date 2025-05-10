@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace KataIndividual.Kata2Refactorizacion
 {
-    public class Dog
+    public interface IPrintable
     {
-        public void Run() => Console.WriteLine("Dog is running");
-        public void Swim() => Console.WriteLine("Dog is swimming");
+        void Print(string document);
     }
 }
