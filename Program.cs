@@ -7,6 +7,8 @@ using KataIndividual.Kata3;
 using KataIndividual.Kata3Refactorizacion;
 using KataIndividual.Kata4;
 using KataIndividual.Kata4Refactorizacion;
+using KataIndividual.Kata5;
+using KataIndividual.Kata5Refactorizacion;
 using System;
 
 namespace KataIndividual
@@ -50,13 +52,13 @@ namespace KataIndividual
             dog.Swim();
 
 
-            Console.WriteLine("\n=== Kata 2 Sistema Legacy con Métodos no Utilizados ===");
+            Console.WriteLine("\n=== Kata 2 Sistema Legacy con Métodos no Utilizados (SIN SOLID)===");
             ILegacyPrinterAnterior legacy = new BasicPrinterAnterior();
             legacy.Print("Documento1.pdf");
             TryAction(() => legacy.Scan("Documento1.pdf"));
             TryAction(() => legacy.Fax("Documento1.pdf"));
 
-            Console.WriteLine("\n=== Kata 2 - Solución ===");
+            Console.WriteLine("\n=== Kata 2 - Solución con Refactorización ===");
             var BasicPrinter = new BasicPrinter();
             var Scanner = new Scanner();
 
@@ -64,7 +66,7 @@ namespace KataIndividual
             Scanner.Scan("Escanner1.jpg");
 
 
-            Console.WriteLine("\n=== Kata 3 Operaciones no soportadas ===");
+            Console.WriteLine("\n=== Kata 3 Operaciones no soportadas (SIN SOLID)===");
 
             IVehicleAnterior[] vehicles = {
                 new CarLegacyAnterior(),
@@ -80,7 +82,7 @@ namespace KataIndividual
                 try { v.Fly(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
             }
 
-            Console.WriteLine("\n=== Kata 3 - Solucion ===");
+            Console.WriteLine("\n=== Kata 3 - Solucion con Refactorización ===");
             Console.WriteLine("\n– Car –");
             var car = new Car();
             car.Drive();
@@ -94,7 +96,7 @@ namespace KataIndividual
             boat.Sail();
 
 
-            Console.WriteLine("\n=== Kata 4 Gestión de Sensores en un sistema de monitoreo ===");
+            Console.WriteLine("\n=== Kata 4 Gestión de Sensores en un sistema de monitoreo (SIN SOLID)===");
             ISensorLegacy[] MonitoreoSensors = {
                 new TemperatureSensorLegacy(),
                 new PreassureSensorLegacy(),
@@ -108,7 +110,7 @@ namespace KataIndividual
                 try { v.ReadHumidity(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
             }
 
-            Console.WriteLine("\n=== Kata 4 - Resolución");
+            Console.WriteLine("\n=== Kata 4 - Solución con Refactorización");
 
 
             Console.WriteLine("\n– HumiditySensor –");
@@ -119,6 +121,40 @@ namespace KataIndividual
             var pres = new PreassureSensor();
             Console.WriteLine($"Pressure: {pres.ReadPreassure()}");
 
+            Console.WriteLine("\n=== Kata 5 - Intefaz de Dispositivo IOT (SIN SOLID)");
+            ISmartDeviceLegacy[] SmartDevices = {
+                new SmartLightLegacy(),
+                new SmartSpeakerLegacy()
+            };
+            foreach (var v in SmartDevices)
+            {
+                Console.WriteLine($"\n– {v.GetType().Name} –");
+                try { v.TurnOff(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.TurnOn(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.ConnectToWiFi(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+                try { v.PlayMusic(); } catch (NotSupportedException e) { Console.WriteLine($"  {e.Message}"); }
+            }
+
+            Console.WriteLine("\n=== Kata 5 - Solucion con Refactorización");
+            Console.WriteLine("\n– SmartLight –");
+            var light = new SmartLight();
+            light.TurnOn();
+            light.ConnectToWiFi();
+            light.TurnOff();
+
+            Console.WriteLine("\n– SmartSpeaker –");
+            var speaker = new SmartSpeaker();
+            speaker.TurnOn();
+            speaker.ConnectToWiFi();
+            speaker.PlayMusic();
+            speaker.TurnOff();
+
+
+
+            Console.WriteLine("\n=== Kata 6 - Sistema de Pago en E-Commerce (SIN SOLID)");
+
+
+            Console.WriteLine("\n=== Kata 6 - Solucióin con Refactorización");
 
 
             // SALIR
